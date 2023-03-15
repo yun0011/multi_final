@@ -9,27 +9,25 @@
         <meta name="author" content="">
         <title>Tanzania</title>
 
-        <link rel="shortcut icon" type="image/ico" href="{% static "images/Flag_of_Brazil.png" %}">
+        <link rel="shortcut icon" type="image/ico" href="{% static 'images/Flag_of_Tanzania.svg' %}">
 
         <!--    Google Fonts-->
-        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+        <link href= 'https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800'  rel='stylesheet' type='text/css'>
 
-        {% comment %} <!--Fontawesom-->
-        <link rel="stylesheet" href="css/font-awesome.min.css"> {% endcomment %}
 
         <!--Animated CSS-->
         <link rel="stylesheet" type="text/css" href="{% static 'css/main/animate.min.css' %}">
 
         <!-- Bootstrap -->
-        <link href="{% static "css/main/bootstrap.min.css" %}" rel="stylesheet" >
+        <link href="{% static 'css/main/bootstrap.min.css' %}" rel="stylesheet" >
 
-        <link rel="stylesheet" href="{% static "css/main/isotope/style.css" %}">
+        <link rel="stylesheet" href="{% static 'css/main/isotope/style.css' %}">
 
         <!--Main Stylesheet-->
         <link rel="stylesheet" href="{% static 'css/main/style.css' %}">
         <link rel="stylesheet" href="{% static 'css/main/styles1.css' %}">
         <!--Responsive Framework-->
-        <link href="{% static "css/main/responsive.css" %}" rel="stylesheet">
+        <link href="{% static 'css/main/responsive.css' %}" rel="stylesheet">
         
     </head>
     <body>
@@ -123,7 +121,7 @@
                             <p class="fs-3 mb-3">탄자니아에는 독특한 전통 커피 레시피가 있다. 생강 커피(Ginger Coffee)라고 하는데 생강을 넣고 끓인 물에 커피 가루와 설탕을 넣고 다시 끓여 거름망에 걸러 마시는 것이다. 음료라기보다는 약에 가까운 건강 음료로 음용하고 있으며, 우리가 마시는 커피보다 약간 걸쭉한 느낌이며 생강차에 가까운 맛이라고 한다.</p>
                             <p class="fs-3 mb-4">킬리만자로 산자락에서 자란 킬리만자로, 탄자니아 AA는 로스팅 카페에서 어렵지 않게 만날 수 있는 원두이다. 산미와 단맛의 밸런스가 좋고 농도가 짙게 추출되는 경향이 있어 아이스 커피로 그만이라고 하니 기회가 된다면 아이스로 마셔보길 추천한다.</p>
 
-                            <h2 class="fw-bolder mb-4 mt-5" id="prodectionarea">커피 생산지역</h2>
+                            <h2 class="fw-bolder mb-4 mt-5" id="productionarea">커피 생산지역</h2>
                             <p class="fs-3 mb-3">탄자니아의 주요 생산지는 모시(Moshi) 지역을 비롯한 킬리만자로산과 빅토리아 호수 근처의 북부 지역이며, 최근 음베야(Mbeya)를 비롯한 남부 지역이 주목받고 있다고 한다. 아라비카의 주요 산지는 킬리만자로 화산지대에 있는 모시(Moshi)지역과 탕가니카(Tanganyika)· 니아사(Nyasa) 호수 지역이며, 로부스타는 탕가(Tanga) 지역이 유명하다. 
                                 아라비카의 수확은 10월~2월경으로 주로 습식법으로 가공하며, 로부스타는 6월~12월에 수확하여 건식법으로 가공한다.</p>
                             <p class="fs-3 mb-3">북쪽의 커피는 대체로 산과 바디감이 있고 밸런스가 좋아 높은 평가를 받는다. 남부 지역의 커피는 밸런스는 좋지만, 산이 적게 느껴지는 켄트종이 많아 북부 지역의 원두에 비해 향미를 다소 무겁게 느낄 수 있다. 전체적으로 탄자니아 커피는 부드럽고 깔끔한 맛을 가지고 있다. </p>
@@ -131,48 +129,6 @@
 
                         </section>
                     </article>
-                    <!-- Comments section-->
-                    <section class="mb-5">
-                        <div class="card bg-light">
-                            <div class="card-body">
-                                <!-- Comment form-->
-                                <form class="mb-4"><textarea class="form-control" rows="3" placeholder="Join the discussion and leave a comment!"></textarea></form>
-                                <!-- Comment with nested comments-->
-                                <div class="d-flex mb-4">
-                                    <!-- Parent comment-->
-                                    <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
-                                    <div class="ms-3">
-                                        <div class="fw-bold">Commenter Name</div>
-                                        If you're going to lead a space frontier, it has to be government; it'll never be private enterprise. Because the space frontier is dangerous, and it's expensive, and it has unquantified risks.
-                                        <!-- Child comment 1-->
-                                        <div class="d-flex mt-4">
-                                            <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
-                                            <div class="ms-3">
-                                                <div class="fw-bold">Commenter Name</div>
-                                                And under those conditions, you cannot establish a capital-market evaluation of that enterprise. You can't get investors.
-                                            </div>
-                                        </div>
-                                        <!-- Child comment 2-->
-                                        <div class="d-flex mt-4">
-                                            <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
-                                            <div class="ms-3">
-                                                <div class="fw-bold">Commenter Name</div>
-                                                When you put money directly to a problem, it makes a good headline.
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Single comment-->
-                                <div class="d-flex">
-                                    <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
-                                    <div class="ms-3">
-                                        <div class="fw-bold">Commenter Name</div>
-                                        When I look at the universe and all the ways the universe wants to kill us, I find it hard to reconcile that with statements of beneficence.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
                 </div>
                 <!-- Side widgets-->
                 <div class="col-lg-4 upmargin">

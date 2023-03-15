@@ -9,24 +9,25 @@
         <meta name="author" content="">
         <title>Mexico</title>
 
-        <link rel="shortcut icon" type="image/ico" href= "{% static "images/Flag_of_Brazil.png" %}">
+        <link rel="shortcut icon" type="image/ico" href="{% static 'images/Flag_of_Mexico.svg' %}">
 
         <!--    Google Fonts-->
-        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+        <link href= 'https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800'  rel='stylesheet' type='text/css'>
+
 
         <!--Animated CSS-->
         <link rel="stylesheet" type="text/css" href="{% static 'css/main/animate.min.css' %}">
 
         <!-- Bootstrap -->
-        <link href="{% static "css/main/bootstrap.min.css" %}" rel="stylesheet" >
+        <link href="{% static 'css/main/bootstrap.min.css' %}" rel="stylesheet" >
 
-        <link rel="stylesheet" href="{% static "css/main/isotope/style.css" %}">
+        <link rel="stylesheet" href="{% static 'css/main/isotope/style.css' %}">
 
         <!--Main Stylesheet-->
         <link rel="stylesheet" href="{% static 'css/main/style.css' %}">
         <link rel="stylesheet" href="{% static 'css/main/styles1.css' %}">
         <!--Responsive Framework-->
-        <link href="{% static "css/main/responsive.css" %}" rel="stylesheet">
+        <link href="{% static 'css/main/responsive.css' %}" rel="stylesheet">
         
     </head>
     <body>
@@ -123,7 +124,7 @@
                             <p class="fs-3 mb-3">이외에도 멕시코는 국가 차원에서 커피 산업에 대한 지원을 강화하며 커피 시장의 강자로 거듭나기 위해 노력을 가하고 있다. 다양한 커피 관련 행사를 개최하며 커피 생산지의 위상을 높이고 있는 것. 일례로 2000년대 이후로 멕시코 커피산업의 발전을 도모하게 하기 위해 생산자, 도소매업자, 소비자 등이 참가하는 멕시코시티 커피 박람회(Expo Cafe)를 매년 개최하고 있다.</p>
                             <p class="fs-3 mb-4">멕시코의 커피 문화는 새벽같이 눈을 떠 바쁘게 움직이는 현대인의 커피 문화와는 사뭇 다르다. 대부분 카페는 정오가 다 되어서야 문을 열어 ‘모닝커피’를 찾아보기 어렵다. 대신 ‘테이블 위에’라는 뜻의 ‘소브레메사(sobremesa)’라는 독특한 전통이 있다. 식사를 마치고 여러 명이 함께 의자에 기대어 앉아 여유롭게 커피를 마시는 것을 뜻한다. 시간은 자유롭다. 10분이 될 수도 있고 10시간이 될 수도 있다. 이 전통을 통해 멕시코인들이 커피를 마시며 여유를 찾는 시간을 중요시한다는 것을 알 수 있다.</p>
 
-                            <h2 class="fw-bolder mb-4 mt-5" id="prodectionarea">커피 생산지역</h2>
+                            <h2 class="fw-bolder mb-4 mt-5" id="productionarea">커피 생산지역</h2>
                             <p class="fs-3 mb-3">멕시코의 북부지역은 커피 존(Coffee Zone, Coffee Belt)을 벗어나기 때문에 주로 남부 지방에서만 커피가 경작된다. 주요 생산지는 남부의 과테말라 국경지대에 있는 치아파스(Chiapas) 주이다. 화산지대로 이루어진 남부지방은 1,700m 이상의 고원지역으로 커피 경작에 이상적인 기후적 조건을 지녔다. 이곳에서 생산된 고품질 커피에는 일반적으로 ‘알투라(Altura)’라는 이름이 붙는데 이는 스페인어로 ‘높이’, ‘꼭대기’라는 뜻이다. 커피 수확은 대략 9월~3월에 이루어진다.</p>
                             <p class="fs-3 mb-3">과테말라와 접경지에 위치한 멕시코 남부 치아파스 주에서는 타파출라(Tapachula) 지역에서 생산된 커피가 유명하다. 이곳에서는 멕시코의 대표적인 커피 재배방식인 유기농법으로 주로 커피를 재배하고 있다. 또 다른 멕시코 커피의 주 재배지는 동부의 대서양 연안의 베라크루즈(Veracruz)와 남서부에 위치한 오악사카(Oaxaca) 주이다. 베라크루즈에서는 코아테펙(Coatepec) 지역의 커피가 유명하고 오악사카(Oaxaca)에서는 플루마 히달고(Pluma Hidalgo) 지역에서 생산된 커피가 대표적이다.</p>
                             <p class="fs-3 mb-3">일반적으로 멕시코 커피의 과육 부분인 체리는 달콤하고 가벼우며, 그 씨앗인 생두는 사과산(marlic acid)과 구연산(citric acid) 계열의 신맛이 난다. 전체적인 커피 맛은 부드럽고 마시기 편한 커피로 평가받는다. 바디가 강하지 않고 중성적인 특성 때문에 블렌딩의 기본으로 많이 사용된다.</p>
@@ -132,48 +133,6 @@
 
                         </section>
                     </article>
-                    <!-- Comments section-->
-                    <section class="mb-5">
-                        <div class="card bg-light">
-                            <div class="card-body">
-                                <!-- Comment form-->
-                                <form class="mb-4"><textarea class="form-control" rows="3" placeholder="Join the discussion and leave a comment!"></textarea></form>
-                                <!-- Comment with nested comments-->
-                                <div class="d-flex mb-4">
-                                    <!-- Parent comment-->
-                                    <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
-                                    <div class="ms-3">
-                                        <div class="fw-bold">Commenter Name</div>
-                                        If you're going to lead a space frontier, it has to be government; it'll never be private enterprise. Because the space frontier is dangerous, and it's expensive, and it has unquantified risks.
-                                        <!-- Child comment 1-->
-                                        <div class="d-flex mt-4">
-                                            <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
-                                            <div class="ms-3">
-                                                <div class="fw-bold">Commenter Name</div>
-                                                And under those conditions, you cannot establish a capital-market evaluation of that enterprise. You can't get investors.
-                                            </div>
-                                        </div>
-                                        <!-- Child comment 2-->
-                                        <div class="d-flex mt-4">
-                                            <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
-                                            <div class="ms-3">
-                                                <div class="fw-bold">Commenter Name</div>
-                                                When you put money directly to a problem, it makes a good headline.
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Single comment-->
-                                <div class="d-flex">
-                                    <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
-                                    <div class="ms-3">
-                                        <div class="fw-bold">Commenter Name</div>
-                                        When I look at the universe and all the ways the universe wants to kill us, I find it hard to reconcile that with statements of beneficence.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
                 </div>
                 <!-- Side widgets-->
                 <div class="col-lg-4 upmargin">
