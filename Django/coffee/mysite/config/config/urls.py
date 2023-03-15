@@ -15,16 +15,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include # include는 다른 urlconf를 참조할 수 있도록 해줌
-from coffe_news import views
+# from coffe_news import views
+from main import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index),
+    path('', include('main.urls')),
     path('coffe_news/', include('coffe_news.urls')),
     path('main/',include('main.urls')), 
     path('main/index.html', include('coffe_news.urls')),
     path('index.html/', include('coffe_news.urls')),
-    path('main/base.html/', include('bbsnote.urls')),
+    path('base.html/', include('bbsnote.urls')),
     
                                                  
                                                     ##처음시작할때 보여줄 페이지인것임 -> views.py에 index함수를 만들어줘야함
