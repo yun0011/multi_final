@@ -1,0 +1,23 @@
+{% load static %}
+<link rel="stylesheet" href= "{% static "css/review/comment.css" %}">
+<link rel="icon" type="image/ico" href="https://e7.pngegg.com/pngimages/583/727/png-clipart-baby-baby-thumbnail.png">
+
+<h1 class="comment_title">{{board.subject}}</h1>
+    <div class="comment_contentbox">
+        {{board.content}}
+    </div>
+    <h5 class="comment_numb">{{board.comment_set.count}}개의 댓글이 있습니다.</h5>
+    <div class="comment_content" text-align="text-center"> 
+        <ul>
+            {% for comment in board.comment_set.all %}
+            <li class="comment_content">
+                <img src="https://postfiles.pstatic.net/MjAyMzAzMTRfMTUw/MDAxNjc4NzczMzEzMzQ0.OMie0sC6LnxAlAqAVdiPiCAPKO59OcsORsnQTVmjYy8g.hqBJofXtDe-TIOyWRcmPO29uW76NzXLUFhWaY-nMv_Mg.PNG.mia3824/free-icon-coffee-beans-3219333.png?type=w966" width="20" height="20"> 
+                {{comment.content}}</li>
+            {% endfor %}
+        </ul>
+    </div>
+<form action = "{% url 'bbsnote:comment_create' board.id %}" method = "post">
+{% csrf_token %}
+<textarea name="content" id ="content" rows=  "15"> </textarea>
+<input type="submit" value="댓글달기">
+</form>
