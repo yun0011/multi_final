@@ -19,13 +19,12 @@ from main import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index),
+    path('', include('main.urls')),
     path('coffe_news/', include('coffe_news.urls')),
     path('main/',include('main.urls')), 
     path('main/index.html', include('coffe_news.urls')),
     path('index.html/', include('coffe_news.urls')),
     path('main/base.html/', include('bbsnote.urls')),
-    
                                                  
                                                     ##처음시작할때 보여줄 페이지인것임 -> views.py에 index함수를 만들어줘야함
 ]                                                   ##coffe_news/로 시작하는 모든 url은 coffe_news.urls로 전달됨
