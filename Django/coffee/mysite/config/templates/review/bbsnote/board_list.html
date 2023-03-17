@@ -3,13 +3,19 @@
 {% load static %}
 {% block content %}
 
+<link rel="shortcut icon" type="image/ico" href="{% static 'images/reviews_icon.png' %}">
+
+<div class="container my-5">
+    <h2 class="my-3 text-center review_title">Coffee Review</h2>
+</div>
+
 <div class="container my-3">
     <table class="table">
         <thead>
         <tr class="thead-light board_text"> 
-            <th>No</th>           
-            <th style="width:50%">Review</th>
-            <th>Date</th>
+            <th class="table_th text-center">No</th>           
+            <th class="table_th text-center" style="width:50%">Review</th>
+            <th class="table_th text-center">Date</th>
         </tr>
         </thead>
         <tbody class="board_contents" >
@@ -17,14 +23,14 @@
         {% if 'review/bbsnote/board_list' %}
         {% for board in board_list %}
 
-        <tr class="text-left">
-            <td>
+        <tr>
+            <td class="text-center">
                 {{board_list.paginator.count|sub:board_list.start_index|sub:forloop.counter0 |add:1 }}
             </td>
             <td class="text-left">
                 <a href="{% url 'bbsnote:detail' board.id %}">{{ board.subject }}</a>                
             </td>            
-            <td>
+            <td class="text-left">
                 {{ board.create_date }}
             </td>
         </tr>

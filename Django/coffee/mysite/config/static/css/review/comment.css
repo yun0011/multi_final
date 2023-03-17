@@ -14,6 +14,13 @@ font-family: 'Stylish', sans-serif;
     letter-spacing: 3px;
 }
 
+.table_th {
+    font-size: 20px;
+    font-family: 'Stylish', sans-serif;
+    color: #6f4415;
+    letter-spacing: 3px;
+}
+
 .comment_contentbox {
     font-family: 'Noto Sans KR', sans-serif;
     letter-spacing: 2px;
@@ -39,6 +46,13 @@ font-family: 'Stylish', sans-serif;
     text-align: left;
     margin: 0 0 0 30px;
     letter-spacing: 1px;
+}
+
+.review_title {
+    font-family: 'Stylish', sans-serif;
+    font-weight: bolder;
+    letter-spacing: 3px;
+    color: #331e07
 }
 
 textarea {

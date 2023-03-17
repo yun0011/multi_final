@@ -2,12 +2,12 @@
 {% load static %}
 <html lang="ko">
   <head>
-  	<title>coffe_news</title>
+  	<title>coffee_news</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	
-	<link rel="stylesheet" href="{% static 'css/coffee_news/style.css' %}">
+	<link rel="stylesheet" href="{% static 'css/coffee_news/news_title_text.css' %}">
+	<link rel="stylesheet" href="{% static 'css/coffee_news/style.css' %}" !important>
 	<script src="http://code.jquery.com/jquery-3.6.0.min.js"></script> 
     
 	<link rel="shortcut icon" type="image/ico" href="{% static 'images/news_icon.png' %}">
@@ -75,13 +75,13 @@
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse zero_mp" id="bs-example-navbar-collapse-1">
 							<ul class="nav navbar-nav navbar-right main_menu">
-								<li><a class="header" href="../Colombia_a.html">콜롬비아</a></li>
-                                <li><a class="header" href="../Brazil_a.html">브라질</a></li>
-                                <li><a class="header" href="../Ethiopia_a.html">에티오피아</a></li>
-                                <li><a class="header" href="../Kenya_a.html">케냐</a></li>
-                                <li><a class="header" href="../tanzania.html">탄자니아</a></li>
-                                <li><a class="header" href="../Mexico.html">멕시코</a></li>
-								<li><a class="header" href="../base.html">리뷰</a></li>
+								<li><a class="header" href="../main/Colombia_a.html">콜롬비아</a></li>
+                                <li><a class="header" href="../main/Brazil_a.html">브라질</a></li>
+                                <li><a class="header" href="../main/Ethiopia_a.html">에티오피아</a></li>
+                                <li><a class="header" href="../main/Kenya_a.html">케냐</a></li>
+                                <li><a class="header" href="../main/tanzania.html">탄자니아</a></li>
+                                <li><a class="header" href="../main/Mexico.html">멕시코</a></li>
+								<li><a class="header" href="../main/base.html">리뷰</a></li>
                                 <li><a class="header" href="../index.html">뉴스기사</a></li>
 							</ul>
 						</div>
@@ -102,20 +102,20 @@
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-md-6 text-center mb-4">
-					<h2 class="heading-section">coffee_news</h2>
+					<h2 class="news_title">Coffee News</h2>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-12">
-					<h3 class="h5 mb-4 text-center">news_table</h3>
+					<h3 class="h5 mb-4 text-center"></h3>
 					<div class="table-wrap">
 						<table class="table myaccordion table-hover" id="accordion">
 						  	<thead>
 						    	<tr>
-									<th>No</th>
-							  		<th>DATE</th>
-									<th>TITLE</th>
-									<th>LINK</th>
+									<th class="news_table_th col-md-2">No</th>
+							  		<th class="news_table_th col-md-3">DATE</th>
+									<th class="news_table_th col-md-6">TITLE</th>
+									<th class="news_table_th col-md-5">LINK</th>
 						    	</tr>
 						 	</thead>
 						  	<tbody>
@@ -124,10 +124,10 @@
 									<tr>
 										<div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
 											<div class="card-body">
-												<th scope="row">{{news.id}}</th>
-												<td width = '600px'>{{news.date}}</td>
-												<td width = '2500px'>{{news.title}}</td>
-												<td><a href="{{news.link}}" target = _blank>{{news.link}}</a></td>
+												<th class="news_table_th" scope="row">{{news.id}}</th>
+												<td class="news_table_td" width = '600px'>{{news.date}}</td>
+												<td class="news_table_td" width = '2500px'>{{news.title}}</td>
+												<td class="news_table_td"><a href="{{news.link}}" target = _blank>{{news.link}}</a></td>
 											</div>
 										</div>	
 								{% endfor %}
@@ -142,46 +142,47 @@
 		</div>
 	</section>
 
-	<section class="pageing">
-	<!-- 페이징처리 시작 -->
-    <ul class="pagination justify-content-center">
-        <!-- 이전페이지 -->
-        {% if news_list.has_previous %}
-        <li class="page-item">
-            <a class="page-link" data-page="{{ news_list.previous_page_number }}" href="#">이전</a>
-        </li>
-        {% else %}
-        <li class="page-item disabled">
-            <a class="page-link" tabindex="-1" aria-disabled="true" href="#">이전</a>
-        </li>
-        {% endif %}
-        <!-- 페이지리스트 -->
-        {% for page_number in news_list.paginator.page_range %}
-        {% if page_number >= news_list.number|add:-5 and page_number <= news_list.number|add:5 %}
-            {% if page_number == news_list.number %}
-            <li class="page-item active" aria-current="page">
-                <a class="page-link" data-page="{{ page_number }}" href="#">{{ page_number }}</a>
-            </li>
-            {% else %}
-            <li class="page-item">
-                <a class="page-link" data-page="{{ page_number }}" href="#">{{ page_number }}</a>
-            </li>
-            {% endif %}
-        {% endif %}
-        {% endfor %}
-        <!-- 다음페이지 -->
-        {% if news_list.has_next %}
-        <li class="page-item">
-            <a class="page-link" data-page="{{ news_list.next_page_number }}" href="#">다음</a>
-        </li>
-        {% else %}
-        <li class="page-item disabled">
-            <a class="page-link" tabindex="-1" aria-disabled="true" href="#">다음</a>
-        </li>
-        {% endif %}
-    </ul>
-    <!-- 페이징처리 끝 -->
+	<section>
+		<!-- 페이징처리 시작 -->
+		<ul class="pagination justify-content-center">
+			<!-- 이전페이지 -->
+			{% if news_list.has_previous %}
+			<li class="page-item">
+				<a class="page-link" data-page="{{ news_list.previous_page_number }}" href="#">이전</a>
+			</li>
+			{% else %}
+			<li class="page-item disabled">
+				<a class="page-link" tabindex="-1" aria-disabled="true" href="#">이전</a>
+			</li>
+			{% endif %}
+			<!-- 페이지리스트 -->
+			{% for page_number in news_list.paginator.page_range %}
+			{% if page_number >= news_list.number|add:-5 and page_number <= news_list.number|add:5 %}
+				{% if page_number == news_list.number %}
+				<li class="page-item active" aria-current="page">
+					<a class="page-link" data-page="{{ page_number }}" href="#">{{ page_number }}</a>
+				</li>
+				{% else %}
+				<li class="page-item">
+					<a class="page-link" data-page="{{ page_number }}" href="#">{{ page_number }}</a>
+				</li>
+				{% endif %}
+			{% endif %}
+			{% endfor %}
+			<!-- 다음페이지 -->
+			{% if news_list.has_next %}
+			<li class="page-item">
+				<a class="page-link" data-page="{{ news_list.next_page_number }}" href="#">다음</a>
+			</li>
+			{% else %}
+			<li class="page-item disabled">
+				<a class="page-link" tabindex="-1" aria-disabled="true" href="#">다음</a>
+			</li>
+			{% endif %}
+		</ul>
+		<!-- 페이징처리 끝 -->			
 	</section>
+		<br>
     <!-- <a href="" class="btn btn-primary">등록</a>    -->
 
 	<form id="searchForm" method="get" action="">    
@@ -193,7 +194,7 @@
 			<div class="row text-center">
 				<div class="col-md-12">
 					<div class="copyright">
-						<p>@ 2023 - Design By</p>
+						<p>@ 2023 - Design By 권묘선, 김아형, 김윤정, 김진권, 이성용</p>
 					</div>
 				</div>
 			</div>
