@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include # include는 다른 urlconf를 참조할 수 있도록 해줌
-from coffe_news import views
+from main import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
